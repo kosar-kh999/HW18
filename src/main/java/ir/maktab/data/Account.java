@@ -39,6 +39,6 @@ public class Account {
         this.expiryDate = expiryDate;
         this.amount = amount;
         Random random = new Random();
-        this.cvv2 = random.nextInt(1000, 9999);
+        this.cvv2 = random.nextInt(100, 9999);
     }
 }
