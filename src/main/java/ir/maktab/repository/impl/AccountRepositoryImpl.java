@@ -18,4 +18,15 @@ public class AccountRepositoryImpl<T extends Account> implements IRepository<T> 
         transaction.commit();
         session.close();
     }
+
+    @Override
+    public void update(int id, double credit) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        T account = (T) session.get(Account.class, id);
+        account.setAmount(credit);
+        session.update(account);
+        transaction.commit();
+        session.close();
+    }
 }
