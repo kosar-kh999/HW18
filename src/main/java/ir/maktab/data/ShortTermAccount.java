@@ -13,12 +13,10 @@ import java.util.Date;
 @Entity
 public class ShortTermAccount extends Account {
     private double profit;
-    private int shortTermPeriod;
 
     public ShortTermAccount(String cardNumber, String accountNumber, Date openingDate, Date expiryDate, double amount,
-                            int cvv2, double profit, int shortTermPeriod) {
+                            int cvv2, double profit) {
         super(cardNumber, accountNumber, openingDate, expiryDate, amount, cvv2);
         this.profit = profit;
-        this.shortTermPeriod = shortTermPeriod;
     }
 }
