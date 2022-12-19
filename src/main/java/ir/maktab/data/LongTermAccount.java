@@ -13,12 +13,10 @@ import java.util.Date;
 @Entity
 public class LongTermAccount extends Account {
     private double annualProfit;
-    private int longTermPeriod;
 
     public LongTermAccount(String cardNumber, String accountNumber, Date openingDate, Date expiryDate, double amount,
-                           int cvv2, double annualProfit, int longTermPeriod) {
+                           int cvv2, double annualProfit) {
         super(cardNumber, accountNumber, openingDate, expiryDate, amount, cvv2);
         this.annualProfit = annualProfit;
-        this.longTermPeriod = longTermPeriod;
     }
 }
