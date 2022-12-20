@@ -2,6 +2,8 @@ package ir.maktab.service.impl;
 
 import ir.maktab.data.Account;
 import ir.maktab.data.CurrentAccount;
+import ir.maktab.data.LongTermAccount;
+import ir.maktab.data.ShortTermAccount;
 import ir.maktab.repository.IRepository;
 import ir.maktab.repository.impl.AccountRepositoryImpl;
 import ir.maktab.service.IService;
@@ -38,7 +40,16 @@ public class ServiceImpl<T extends Account> implements IService<T> {
         accountRepository.update(account.getId(), account.getAmount());
     }
 
-    public static Account getAccount(String type,Account account){
-        if ("CurrentAccount".equalsIgnoreCase(type)) return new CurrentAccount()
+    public static Account getAccount(String type) {
+        if (type == null) {
+            return null;
+        } else if (type.equalsIgnoreCase("CurrentAccount")) {
+            return new CurrentAccount();
+        } else if (type.equalsIgnoreCase("LongTermAccount")) {
+            return new LongTermAccount();
+        } else if (type.equalsIgnoreCase("ShortTermAccount")) {
+            return new ShortTermAccount();
+        }
+        return null;
     }
 }
