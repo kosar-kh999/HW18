@@ -1,9 +1,9 @@
-package ir.maktab.view;
+package ir.maktab.question1.view;
 
-import ir.maktab.data.Account;
-import ir.maktab.service.impl.ServiceImpl;
-import ir.maktab.util.exception.AccountException;
-import ir.maktab.util.validation.AccountValidation;
+import ir.maktab.question1.data.Account;
+import ir.maktab.question1.service.impl.ServiceImpl;
+import ir.maktab.question1.util.exception.AccountException;
+import ir.maktab.question1.util.validation.AccountValidation;
 
 import java.time.LocalDate;
 import java.time.ZoneId;

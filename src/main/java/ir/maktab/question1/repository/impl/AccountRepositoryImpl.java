@@ -1,8 +1,8 @@
-package ir.maktab.repository.impl;
+package ir.maktab.question1.repository.impl;
 
-import ir.maktab.data.Account;
-import ir.maktab.repository.EntityManagerFactory;
-import ir.maktab.repository.IRepository;
+import ir.maktab.question1.data.Account;
+import ir.maktab.question1.repository.EntityManagerFactory;
+import ir.maktab.question1.repository.IRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

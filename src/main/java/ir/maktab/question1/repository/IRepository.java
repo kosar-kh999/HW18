@@ -1,6 +1,6 @@
-package ir.maktab.repository;
+package ir.maktab.question1.repository;
 
-import ir.maktab.data.Account;
+import ir.maktab.question1.data.Account;
 
 public interface IRepository<T extends Account> {
     void creat(T account);

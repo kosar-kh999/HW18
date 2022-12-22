@@ -1,4 +1,4 @@
-package ir.maktab.data;
+package ir.maktab.question1.data;
 
 import lombok.*;
 

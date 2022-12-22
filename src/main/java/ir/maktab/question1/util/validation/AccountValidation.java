@@ -1,8 +1,6 @@
-package ir.maktab.util.validation;
+package ir.maktab.question1.util.validation;
 
-import ir.maktab.util.exception.AccountException;
-
-import javax.xml.bind.ValidationException;
+import ir.maktab.question1.util.exception.AccountException;
 
 public class AccountValidation {
     public static void validCardNumber(String cardNumber) throws AccountException {

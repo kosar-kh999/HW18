@@ -1,7 +1,7 @@
-package ir.maktab.service;
+package ir.maktab.question1.service;
 
-import ir.maktab.data.Account;
-import ir.maktab.util.exception.AccountException;
+import ir.maktab.question1.data.Account;
+import ir.maktab.question1.util.exception.AccountException;
 
 public interface IService<T extends Account> {
     void createNewAccount(T account) throws AccountException;

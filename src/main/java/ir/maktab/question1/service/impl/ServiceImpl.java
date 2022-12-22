@@ -1,14 +1,14 @@
-package ir.maktab.service.impl;
+package ir.maktab.question1.service.impl;
 
-import ir.maktab.data.Account;
-import ir.maktab.data.CurrentAccount;
-import ir.maktab.data.LongTermAccount;
-import ir.maktab.data.ShortTermAccount;
-import ir.maktab.repository.IRepository;
-import ir.maktab.repository.impl.AccountRepositoryImpl;
-import ir.maktab.service.IService;
-import ir.maktab.util.exception.AccountException;
-import ir.maktab.util.validation.AccountValidation;
+import ir.maktab.question1.data.Account;
+import ir.maktab.question1.data.CurrentAccount;
+import ir.maktab.question1.data.LongTermAccount;
+import ir.maktab.question1.data.ShortTermAccount;
+import ir.maktab.question1.repository.IRepository;
+import ir.maktab.question1.repository.impl.AccountRepositoryImpl;
+import ir.maktab.question1.service.IService;
+import ir.maktab.question1.util.exception.AccountException;
+import ir.maktab.question1.util.validation.AccountValidation;
 
 public class ServiceImpl<T extends Account> implements IService<T> {
     IRepository<T> accountRepository = new AccountRepositoryImpl<>();
