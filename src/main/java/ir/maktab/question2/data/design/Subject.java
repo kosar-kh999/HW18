@@ -1,4 +1,4 @@
-/*package ir.maktab.question2.data;
+package ir.maktab.question2.data.design;
 
 
 public interface Subject {
@@ -7,4 +7,5 @@ public interface Subject {
     void signOutObserver(Observer observer);
 
     void notifyObservers();
-}*/
+
+}

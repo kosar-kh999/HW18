@@ -1,6 +1,5 @@
 package ir.maktab.question1.repository;
 
-import ir.maktab.question1.data.Account;
 import ir.maktab.question1.data.LongTermAccount;
 
 import javax.persistence.EntityManager;

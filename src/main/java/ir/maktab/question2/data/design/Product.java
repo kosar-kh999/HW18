@@ -1,20 +1,25 @@
-/*package ir.maktab.question2.data;
+package ir.maktab.question2.data.design;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
+import java.util.List;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
+@ToString
+@NoArgsConstructor
 public class Product implements Subject {
 
-    private ArrayList observers = new ArrayList();
+    private List<Observer> observers;
     private String productName;
-    private String productType;
     private String availability;
+
+    public Product(String productName) {
+        observers = new ArrayList<>();
+        this.productName = productName;
+    }
 
     public void setObservers(ArrayList observers) {
         this.observers = observers;
@@ -24,9 +29,6 @@ public class Product implements Subject {
         this.productName = productName;
     }
 
-    public void setProductType(String productType) {
-        this.productType = productType;
-    }
 
     public void setAvailability(String availability) {
         this.availability = availability;
@@ -35,7 +37,10 @@ public class Product implements Subject {
 
     @Override
     public void signUpObserver(Observer observer) {
-        observers.add(observers);
+        if (observer == null) throw new NullPointerException("Observer is null . ");
+        if (observers.contains(observer)) {
+            throw new RuntimeException("Observer exist.");
+        } else observers.add(observer);
     }
 
     @Override
@@ -45,6 +50,8 @@ public class Product implements Subject {
 
     @Override
     public void notifyObservers() {
-        System.out.println("");
+        for (Observer observer : observers) {
+            observer.update(this.availability);
+        }
     }
-}*/
+}
