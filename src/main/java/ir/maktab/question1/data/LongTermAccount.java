@@ -19,4 +19,5 @@ public class LongTermAccount extends Account {
         super(cardNumber, accountNumber, openingDate, expiryDate, amount, cvv2);
         this.annualProfit = annualProfit;
     }
+
 }

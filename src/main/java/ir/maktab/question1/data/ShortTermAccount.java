@@ -19,4 +19,5 @@ public class ShortTermAccount extends Account {
         super(cardNumber, accountNumber, openingDate, expiryDate, amount, cvv2);
         this.profit = profit;
     }
+
 }
